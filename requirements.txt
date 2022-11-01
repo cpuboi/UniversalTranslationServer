@@ -1,8 +1,9 @@
 # ML
-#GPU=torch
-#CPU=torch==1.13.0+cpu
 
-# CPU
+# GPU CUDA Support (keep this uncommented) 
+torch
+
+# CPU only, uncomment this line and comment "torch" above.
 #torch  --extra-index-url https://download.pytorch.org/whl/cpu
 
 sentencepiece
