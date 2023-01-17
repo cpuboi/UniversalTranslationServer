@@ -12,7 +12,7 @@ class InputTranslationModel(BaseModel):
     input_text: str
     translated_text: Optional[str] = None
     translation_model: Optional[str] = None
-    msg: str = None
+    msg: str = ""
     @validator('src_lang', 'dst_lang', check_fields=False)
     def language_must_be_iso(cls, v):
         " ISO 639-1  language code "

@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 
-class LanguageValidator():
+class LanguageValidator:
     languages_iso: dict = {"Afrikaans": "af", "Amharic": "am", "Arabic": "ar", "Asturian": "ast", "Azerbaijani": "az",
                      "Bashkir": "ba", "Belarusian": "be", "Bulgarian": "bg", "Bengali": "bn", "Breton": "br",
                      "Bosnian": "bs", "Catalan; Valencian": "ca", "Cebuano": "ceb", "Czech": "cs", "Welsh": "cy",
@@ -23,14 +23,14 @@ class LanguageValidator():
                      "Swedish": "sv", "Swahili": "sw", "Tamil": "ta", "Thai": "th", "Tagalog": "tl", "Tswana": "tn",
                      "Turkish": "tr", "Ukrainian": "uk", "Urdu": "ur", "Uzbek": "uz", "Vietnamese": "vi",
                      "Wolof": "wo", "Xhosa": "xh", "Yiddish": "yi", "Yoruba": "yo", "Chinese": "zh", "Zulu": "zu"}
-    iso_set: set = ('th', 'kn', 'ml', 'lo', 'uz', 'ar', 'he', 'ca', 'gl', 'lv', 'it', 'ka', 'tr', 'ht', 'ff', 'ru', 'sd', 'sk',
+    iso_set: set =set(['th', 'kn', 'ml', 'lo', 'uz', 'ar', 'he', 'ca', 'gl', 'lv', 'it', 'ka', 'tr', 'ht', 'ff', 'ru', 'sd', 'sk',
          'lb', 'tl', 'af', 'ps', 'mn', 'fa', 'hr', 'bn', 'es', 'km', 'fi', 'kk', 'is', 'fr', 'en', 'ms', 'gd', 'mg',
          'su', 'de', 'am', 'my', 'et', 'ln', 'ceb', 'lt', 'pa', 'hy', 'mr', 'vi', 'ss', 'az', 'ga', 'da', 'hu', 'sw',
          'gu', 'nl', 'sl', 'ig', 'or', 'lg', 'sr', 'ur', 'el', 'uk', 'ilo', 'ja', 'ba', 'ko', 'wo', 'xh', 'so', 'ns',
          'ast', 'bs', 'yi', 'pl', 'sv', 'yo', 'br', 'ta', 'si', 'hi', 'bg', 'ha', 'mk', 'fy', 'cs', 'zh', 'ne', 'tn',
-         'jv', 'sq', 'id', 'post 1500', 'no', 'pt', 'be', 'cy', 'zu', 'ro')
+         'jv', 'sq', 'id', 'post 1500', 'no', 'pt', 'be', 'cy', 'zu', 'ro'])
 
-    def language_iso_check(cls, v):
+    def language_iso_check(self, v):
         if v not in LanguageValidator.iso_set:
             raise ValueError('Must be ISO-639-1 standard language: en, de, no, fi')
         return v
