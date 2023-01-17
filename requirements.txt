@@ -6,8 +6,10 @@ torch
 # CPU only, uncomment this line and comment "torch" above.
 #torch  --extra-index-url https://download.pytorch.org/whl/cpu
 
+# For Natural language processing
 sentencepiece
 transformers
+sacremoses
 
 
 # Web
