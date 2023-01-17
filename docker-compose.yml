@@ -9,6 +9,6 @@ services:
     ports:
      - 7890:7890
     volumes:
-      - /data/models/m2m100_418M:/models/m2m100
+      - /data/models/:/models/
     command: uvicorn main:app --reload --port 7890 --host 127.0.0.1
     network_mode: "host"
