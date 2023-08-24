@@ -8,6 +8,7 @@ from translation_server.core.config import Settings
 
 """
 https://huggingface.co/Helsinki-NLP/opus-mt-ru-en
+https://huggingface.co/Helsinki-NLP/opus-mt-da-en
 """
 
 
