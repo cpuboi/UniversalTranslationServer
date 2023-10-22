@@ -49,7 +49,7 @@ class OpusMtHandler:
         if input_text == "":
             return ""  # This is an ugly fix
         for sentence in sentences:
-            sentence = sentence[:400]  # Truncate characters of the sentence to max length 400
+            sentence = sentence[:400]  # Truncate sentence to max 400 chars, not elegant but ok.
             input_ids = self.tokenizer(sentence, return_tensors="pt").to(
                 self.device).input_ids
             outputs = self.model.generate(input_ids=input_ids, num_beams=3, num_return_sequences=1, max_new_tokens=Settings.OPUS_MT_MAX_TOKENS)

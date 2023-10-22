@@ -1,10 +1,10 @@
 # ML
 
 # GPU CUDA Support
-#torch
+torch
 
 # CPU only, uncomment this line and comment "torch" above if you cant afford a 4090TI
-torch  --extra-index-url https://download.pytorch.org/whl/cpu
+#torch  --extra-index-url https://download.pytorch.org/whl/cpu
 
 # For Natural language processing
 sentencepiece

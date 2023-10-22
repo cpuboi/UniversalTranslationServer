@@ -9,8 +9,8 @@ services:
     ports:
      - 7890:7890
     volumes:
-      - /local_harddrive/models/:/models/
-      - /local_harddrive/app:/app/
+      - /local_harddrive/models:/models/
+      - /local_harddrive/models/app:/app/
     #command: uvicorn main:app --reload --port 7890 --host 127.0.0.1
     command: uvicorn main:app --reload --port 7890 --host 0.0.0.0
       #network_mode: "host"

@@ -18,6 +18,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from translation_server.core.config import Settings
 from translation_server.api.router import api_router
+from translation_server.model_handler.model_handler import ModelHandler
 
 
 Log_Format = "%(levelname)s %(asctime)s - %(message)s"
@@ -25,7 +26,6 @@ logging.basicConfig(stream=sys.stdout,
                     format=Log_Format,
                     level=logging.INFO)
 logger = logging.getLogger()
-
 
 def include_router(app):
     app.include_router(api_router)

@@ -46,3 +46,18 @@ It is possible to select model, if you choose "default" TranslationServer will p
 #### Interactive client ####
 `./client.py` makes it possible to query the webserver from the terminal. 
 
+
+#### Memory ####
+* All translated sentences have the possibility to get stored in a SQLite backed memory.
+  * If the sentence is being translated a second time the cache will get used.
+  * This can be disabled in ./core/config.py Alternatively set to use ram only.
+  * nltk splits the input text into sentences, the sentences are compared to memory, otherwise translated and then added to memory. The model used for translation is also stored.
+  
+### Version info ###
+**0.0.3**  
+* Memory works with Opus-MT
+  * Memory is running as single thread but with multiple threads, sometimes errors occur
+  
+**0.0.4**  
+* Memory works with m2m100
+  
