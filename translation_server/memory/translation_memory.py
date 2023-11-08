@@ -47,7 +47,7 @@ class TranslationMemory:
             """
             creation_header = [("input_text", "TEXT"), ("translated_text", "TEXT"), ("translation_model", "INTEGER"), ("translation_counter", "INTEGER")]
             unique_header = ["input_text", "translated_text", "translation_model"]  # Translation count should not be part of the unique combination
-            self.database.multi_create_database(creation_header, custom_unique_header=unique_header)
+            self.database.multi_create_database(creation_header, custom_unique_columns=unique_header)
 
         memory_dict = {"translated_text": None,
                        "translation_counter": 0}

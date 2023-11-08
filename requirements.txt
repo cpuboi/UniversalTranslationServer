@@ -10,7 +10,7 @@ torch
 sentencepiece
 transformers
 sacremoses
-
+nltk # For splitting sentences and storing in memory
 
 # Web
 pydantic
